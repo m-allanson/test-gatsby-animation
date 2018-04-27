@@ -1,29 +1,40 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled, { keyframes } from 'styled-components'
 
-import CoolBackground from 'components/CoolBackground'
-import FadeIn from 'components/FadeIn'
-import Footer from 'components/Footer'
-import Header from 'components/Header'
-import NewsletterForm from 'components/NewsletterForm'
-import WombakLogo from 'components/WombakLogo'
 
-const footerLinks = [
-  {
-    name: 'github',
-    link: 'https://github.com/wombak',
-  },
-]
+const demoAnimation = keyframes`
+  to {
+    opacity: 1;
+    background-color: hotpink;
+    transform: scale(0.5);
+  }
+`
+
+const StyledEl = styled.h1`
+  background-color: turquoise;
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-height: 60vh;
+  max-width: 80vw;
+  opacity: 1;
+  padding: 100px 0;
+  text-align: center;
+  transform: scale(1.5);
+  transform-origin: bottom center;
+  animation: ${demoAnimation} .5s ease-in-out forwards;
+
+  @media screen and (max-device-width: 736px) and (orientation: landscape) {
+    max-height: 40vh;
+  }
+`
+
+const DemoEl = props => <StyledEl {...props} />
 
 const IndexPage = () => (
   <div>
-    <WombakLogo />
-    <FadeIn>
-      <Header />
-      <NewsletterForm formAction={process.env.GATSBY_NEWSLETTER_URL || ''} />
-      <Footer links={footerLinks} />
-    </FadeIn>
-    <CoolBackground />
+    <DemoEl>THIS IS A DEMO</DemoEl>
   </div>
 )
 
