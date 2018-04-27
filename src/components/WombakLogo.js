@@ -20,20 +20,22 @@ const WombakSVG = ({ className }) => (
 const logoFadeInAnimation = keyframes`
   to {
     opacity: 1;
+    background-color: hotpink;
     transform: scale(1);
   }
 `
 
 const StyledLogo = styled(WombakSVG)`
+  background-color: turquoise;
   display: block;
   width: 100%;
   margin: auto;
   max-height: 60vh;
   max-width: 80vw;
-  opacity: 0;
+  opacity: 1;
   transform: scale(1.5);
   transform-origin: bottom center;
-  animation: ${logoFadeInAnimation} 1.5s ease-in-out forwards 0.5s;
+  animation: ${logoFadeInAnimation} .5s ease-in-out forwards;
 
   @media screen and (max-device-width: 736px) and (orientation: landscape) {
     max-height: 40vh;

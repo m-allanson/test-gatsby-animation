@@ -1,5 +1,5 @@
-import 'aframe'
-import 'aframe-animation-component'
+// import 'aframe'
+// import 'aframe-animation-component'
 import React from 'react'
 import styled from 'styled-components'
 import sky from '../images/allsky.jpg'
@@ -17,7 +17,7 @@ const Background = styled.div`
 const CoolBackground = () =>
   typeof window !== 'undefined' && (
     <Background>
-      <a-scene vr-mode-ui="enabled: false">
+      {/* <a-scene vr-mode-ui="enabled: false">
         <a-assets>
           <img id="sky" src={sky} />
         </a-assets>
@@ -31,7 +31,7 @@ const CoolBackground = () =>
             repeat="indefinite"
           />
         </a-sky>
-      </a-scene>
+      </a-scene> */}
     </Background>
   )
 

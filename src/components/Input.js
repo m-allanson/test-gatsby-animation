@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { darken } from 'polished'
 
 const InputWrap = styled.div`
   margin: auto;
@@ -63,10 +62,6 @@ const StyledButton = styled.button`
   cursor: pointer;
   transition: background 0.25s ease-in-out;
   white-space: nowrap;
-
-  &:hover {
-    background: ${darken(0.15, '#f5e05b')};
-  }
 `
 
 export const InputWithButton = ({ buttonLabel, onClick, ...props }) => (

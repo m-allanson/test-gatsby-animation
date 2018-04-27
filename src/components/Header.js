@@ -64,7 +64,7 @@ const ComingSoon = ({ className }) => (
 const Header = ({ ...props }) => (
   <StyledHeader {...props}>
     <Title>
-      We are<br /> <strong>Wombak</strong>
+      We are<br /> <strong>a test site</strong>
     </Title>
     <ComingSoon className="subtitle" />
   </StyledHeader>
